@@ -10,18 +10,20 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
+			arr.sort((a,b)=> a-b)
+			return arr[arr.length-2]	
 		}
 
 		function Main() {
 			var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i+1));
+				arr[i] = Number(prompt("Enter element " + (i+1)));
 			}
 			alert(secondHighest(arr));
 		}
 		Main();
+	
 	</script>
 
     <script type="text/javascript" src="./script.js">
